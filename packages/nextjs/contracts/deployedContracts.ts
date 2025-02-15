@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     EcoETH: {
-      address: "0x4ed7c70F96B99c776995fB64377f0d4aB3B0e1C1",
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       abi: [
         {
           inputs: [],
@@ -239,6 +239,21 @@ const deployedContracts = {
               name: "description",
               type: "string",
             },
+            {
+              internalType: "string",
+              name: "location",
+              type: "string",
+            },
+            {
+              internalType: "int256",
+              name: "latitude",
+              type: "int256",
+            },
+            {
+              internalType: "int256",
+              name: "longitude",
+              type: "int256",
+            },
           ],
           name: "createEvent",
           outputs: [
@@ -318,6 +333,21 @@ const deployedContracts = {
               name: "description",
               type: "string",
             },
+            {
+              internalType: "string",
+              name: "location",
+              type: "string",
+            },
+            {
+              internalType: "int256",
+              name: "latitude",
+              type: "int256",
+            },
+            {
+              internalType: "int256",
+              name: "longitude",
+              type: "int256",
+            },
           ],
           stateMutability: "view",
           type: "function",
@@ -352,6 +382,21 @@ const deployedContracts = {
                   internalType: "string",
                   name: "description",
                   type: "string",
+                },
+                {
+                  internalType: "string",
+                  name: "location",
+                  type: "string",
+                },
+                {
+                  internalType: "int256",
+                  name: "latitude",
+                  type: "int256",
+                },
+                {
+                  internalType: "int256",
+                  name: "longitude",
+                  type: "int256",
                 },
               ],
               internalType: "struct EcoETH.Event[]",
@@ -396,6 +441,21 @@ const deployedContracts = {
               internalType: "string",
               name: "",
               type: "string",
+            },
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+            {
+              internalType: "int256",
+              name: "",
+              type: "int256",
+            },
+            {
+              internalType: "int256",
+              name: "",
+              type: "int256",
             },
           ],
           stateMutability: "view",
