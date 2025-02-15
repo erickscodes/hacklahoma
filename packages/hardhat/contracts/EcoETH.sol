@@ -9,7 +9,10 @@ contract EcoETH is ERC20 {
         string name;
         bool isActive;
         string ipfsLink;
-        string description;  // New description field
+        string description;
+        string location;  // New location field
+        int256 latitude;   // New latitude field (using int256 to support both positive and negative values)
+        int256 longitude;  // New longitude field (using int256 to support both positive and negative values)
     }
 
     // Mapping to store events by event ID
@@ -25,12 +28,15 @@ contract EcoETH is ERC20 {
         _mint(to, amount);
     }
 
-    // Function to create an event with description
+    // Function to create an event with location, latitude, and longitude
     function createEvent(
         string memory name,
         bool isActive,
         string memory ipfsLink,
-        string memory description  // Added description parameter
+        string memory description,
+        string memory location,   // Added location parameter
+        int256 latitude,          // Added latitude parameter
+        int256 longitude          // Added longitude parameter
     ) public returns (uint256) {
         uint256 eventId = nextEventId;
         events[eventId] = Event({
@@ -38,7 +44,10 @@ contract EcoETH is ERC20 {
             name: name,
             isActive: isActive,
             ipfsLink: ipfsLink,
-            description: description  // Store description
+            description: description,
+            location: location,     // Store location
+            latitude: latitude,     // Store latitude
+            longitude: longitude    // Store longitude
         });
 
         eventIds.push(eventId);  // Store the event ID in the array
@@ -52,10 +61,13 @@ contract EcoETH is ERC20 {
         string memory, 
         bool, 
         string memory, 
-        string memory  // Return description
+        string memory,         // Return description
+        string memory,         // Return location
+        int256,                // Return latitude
+        int256                 // Return longitude
     ) {
         Event storage e = events[eventId];
-        return (e.creator, e.name, e.isActive, e.ipfsLink, e.description);  // Include description in return
+        return (e.creator, e.name, e.isActive, e.ipfsLink, e.description, e.location, e.latitude, e.longitude);  // Include location, latitude, and longitude in return
     }
 
     // Optional: function to update event status

@@ -29,11 +29,6 @@ export const menuLinks: HeaderMenuLink[] = [
   //   icon: <BanknotesIcon className="h-4 w-4" />,
   // },
   {
-    label: "Transactions",
-    href: "/blockexplorer",
-    icon: <ArrowLeftRight className="h-4 w-4" />,
-  },
-  {
     label: "Rewards",
     href: "/rewards",
     icon: <Gift className="h-4 w-4" />,
@@ -47,6 +42,11 @@ export const menuLinks: HeaderMenuLink[] = [
     label: "Payouts",
     href: "/payouts",
     icon: <HandCoins className="h-4 w-4" />,
+  },
+  {
+    label: "Transactions",
+    href: "/blockexplorer",
+    icon: <ArrowLeftRight className="h-4 w-4" />,
   },
 ];
 
