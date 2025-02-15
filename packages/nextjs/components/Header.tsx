@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowLeftRight, Gift, HandCoins, PartyPopper, TreePine } from "lucide-react";
+import { ArrowLeftRight, Gift, HandCoins, PartyPopper, Plus, TreePine } from "lucide-react";
 import { hardhat } from "viem/chains";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { BanknotesIcon } from "@heroicons/react/24/outline";
@@ -39,9 +39,9 @@ export const menuLinks: HeaderMenuLink[] = [
     icon: <Gift className="h-4 w-4" />,
   },
   {
-    label: "Rewards",
-    href: "/rewards",
-    icon: <Gift className="h-4 w-4" />,
+    label: "Add Event",
+    href: "/add-event",
+    icon: <Plus className="h-4 w-4" />,
   },
   {
     label: "Payouts",
