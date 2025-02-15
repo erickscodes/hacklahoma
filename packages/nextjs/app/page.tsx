@@ -9,7 +9,7 @@ import { Address } from "~~/components/scaffold-eth";
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
 
-  return <></>;
+  return <div className="bg-white"></div>;
 };
 
 export default Home;
