@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TreePine } from "lucide-react";
+import { ArrowLeftRight, Gift, HandCoins, PartyPopper, TreePine } from "lucide-react";
 import { hardhat } from "viem/chains";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import { BanknotesIcon } from "@heroicons/react/24/outline";
@@ -19,18 +19,34 @@ type HeaderMenuLink = {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "Home",
+    label: "Events",
     href: "/",
+    icon: <PartyPopper className="h-4 w-4" />,
+  },
+  // {
+  //   label: "ERC-20",
+  //   href: "/erc20",
+  //   icon: <BanknotesIcon className="h-4 w-4" />,
+  // },
+  {
+    label: "Transactions",
+    href: "/blockexplorer",
+    icon: <ArrowLeftRight className="h-4 w-4" />,
   },
   {
-    label: "ERC-20",
-    href: "/erc20",
-    icon: <BanknotesIcon className="h-4 w-4" />,
+    label: "Rewards",
+    href: "/rewards",
+    icon: <Gift className="h-4 w-4" />,
   },
   {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugAntIcon className="h-4 w-4" />,
+    label: "Rewards",
+    href: "/rewards",
+    icon: <Gift className="h-4 w-4" />,
+  },
+  {
+    label: "Payouts",
+    href: "/payouts",
+    icon: <HandCoins className="h-4 w-4" />,
   },
 ];
 
@@ -75,7 +91,7 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky lg:static top-0 navbar min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2 bg-[#43a35d]">
+    <div className="sticky lg:static top-0 navbar min-h-0 border-none flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2 bg-[#43a35d]">
       <div className="navbar-start w-auto lg:w-1/2">
         <div className="lg:hidden dropdown" ref={burgerMenuRef}>
           <label
